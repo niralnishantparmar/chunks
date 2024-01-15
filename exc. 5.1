@@ -1,0 +1,22 @@
+#Write a program which repeatedly reads numbers until the uer enters "done". Once "done" is entered, print out the total, count, and average of the numbers. If the user enters anything other than a number, detect their mistake using TRY and EXCEPT and print an error message and skip to the next number.
+num = 0
+count = 0 
+sum = 0
+
+while num is not True:
+	num = input("Enter a number:")
+	if num != 'done':
+		try:
+			num = float(num)
+			count = count + 1
+			sum = sum + num
+		except: 
+			print ("Invalid input plz enter number lmao")
+	elif num == 'done':
+		break
+
+print ("Sum of your numbers:", sum)
+print ("Number of numbers:", count)
+print ("Average of numbers entered:", sum/count)
+
+print ("\n kk goodbye")
