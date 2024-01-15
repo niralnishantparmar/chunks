@@ -1,0 +1,29 @@
+#5.2
+#Write a program that repeatedly prompts a user for integer numbers until the user enters 'done'. Once 'done' is entered, print out the largest and smallest of the numbers. If the user enters anything other than a valid number catch it with a try/except and put out an appropriate message and ignore the number.
+num = 0
+big = None
+smol = None
+
+while num is not True:
+	num = input("Enter a number:")
+	if num != 'done':
+		try:
+			num = int(num)
+			
+			if big is None:
+				big = num
+			elif num > big:
+				big = num
+			
+			if smol is None:
+				smol = num
+			elif num < smol:
+				smol = num
+			
+		except: 
+			print ("Invalid input")
+	elif num == 'done':
+		break
+
+print ("Maximum is", big)
+print ("Minimum is", smol)
